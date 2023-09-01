@@ -1,0 +1,339 @@
+@import url(./vars.css);
+
+/* Modificaciones para la sección Index.HTML */
+html {
+  font-size: 16px;
+}
+
+/* Modificaciones para la sección BODY */
+body {
+  background: var(--clr-main-bg);
+  /* display: flex; */
+  display: grid;
+  /* Se cambia el display de "flex" a "grid" para que se ajuste de manera correcta a lo pedido en las instrucciones dadas. */
+  font-family: var(--ff-secondary);
+  margin: 0;
+  padding: 0%;
+}
+
+/* Clases que se integran en el Index.HTML */
+.hero-container {
+  background: url(../imgs/header-camping.webp);
+  background-position: center;
+  background-size: cover;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  color: var(--clr-white);
+  width: 100%;
+  text-align: center;
+  /* height: 48rem; */
+  /* Sustituído por el "min" */
+  height: min(45rem, 50rem, 55rem);
+  /* Valores del más pequeño al más grande para ajsutar el tamaño de las pantallas */
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  margin-bottom: 8rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 2rem;
+  list-style-type: none;
+  margin-left: 3rem;
+}
+
+.nav-list-link {
+  color: var(--clr-white);
+  text-decoration: none;
+  font-size: var(--fs-md);
+}
+
+.hero-title {
+  font-family: var(--ff-main);
+  /* font-size: var(--fs-xl); */
+  /* Sustituído por el "clamp" */
+  font-size: clamp(var(--fs-lg), 4rem, var(--fs-xl));
+  /* Hace lo mismo con el "min" para ajustar los tamaños de las tipografías del más pequeño, el óptimo y el más grande */
+}
+
+.hero-text {
+  font-size: var(--fs-md);
+  /* No se logró ubicar de manera correcta, se utiliza el Padding para ajustar al ancho de la página */
+  margin: 0 auto 2rem;
+  /* width: 55ch; */
+  /* Sustituído por el "clamp" */
+  width: clamp(20ch, 50%, 55ch);
+  /* Realiza lo mismo que el "clamp" anterior pero con valores de "ch" límites de caracteres para ajustar los textos */
+  /* padding: 0 43rem; */
+  /* No se utiliza porque se ajusta con otros parámetros */
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  align-items: center;
+  background: var(--clr-main);
+  border-radius: 1.5rem;
+  display: flex;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+}
+
+.view-all-btn {
+  background: var(--clr-main-bg);
+  border: 0.1rem solid var(--clr-main);
+  color: var(--clr-main);
+  margin-top: 1rem;
+}
+
+.activities-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Se utiliza para acomodar los textos, especialmente en los Mobiles para que se ajusten las páginas automáticamente */
+  margin: 2rem auto;
+  width: 80vw;
+  /* Definieindo el "Viewport" a un 80% del ancho total de la pantalla */
+}
+
+.activity {
+  display: grid;
+  background: var(--clr-white);
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.activity-icon {
+  margin: auto;
+}
+
+.activity-title {
+  font-family: var(--ff-main);
+  font-size: var(--fs-md);
+  margin: 1rem 0 0;
+}
+
+.activity-text {
+  font-size: var(--fs-nm);
+}
+
+.destinations-container {
+  text-align: center;
+}
+
+.destinations-title {
+  font-family: var(--ff-main);
+  font-size: clamp(var(--fs-md), 1.875rem, var(--fs-lg));
+  margin: 1rem auto;
+  width: 17ch;
+}
+
+.activity-thumb {
+  display: flex;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.activity-image {
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.like-btn {
+  background: var(--clr-white);
+  border: none;
+  border-radius: 0.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.activity-price {
+  background: var(--clr-white);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  bottom: 0;
+  color: var(--clr-main);
+  display: block;
+  left: 50%;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.read-btn {
+  background: var(--clr-gray-bg);
+  color: var(--clr-gray-txt);
+  display: block;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  width: 50%;
+}
+
+.subscribe {
+  background: var(--clr-inner-bg);
+  border-radius: 2rem;
+}
+
+.subscribe-content {
+  align-content: center;
+  display: grid;
+  margin-left: 3rem;
+}
+
+.subscribe-image {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  width: 75%;
+}
+
+.subscribe-form {
+  align-items: center;
+  background: var(--clr-white);
+  border-radius: 1rem;
+  display: flex;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.subscribe-title {
+  font-size: clamp(2rem, 2.25rem, var(--fs-lg));
+  margin: 0;
+  width: min(80%, 90%, 100%);
+}
+
+.email {
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.email:focus {
+  /* Clase para eliminar el borde del focus para el correo */
+  outline: none;
+  box-shadow: 0 0 0 0.1rem var(--clr-main);
+}
+
+.submit-btn {
+  background: url(../imgs/icons/send.svg) var(--clr-main);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem 1.125rem;
+}
+
+.footer-container {
+  background: var(--clr-inner-bg);
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+  color: var(--clr-black);
+  display: grid;
+  margin: 2rem 0 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 2rem auto;
+  width: 80vw;
+}
+
+.footer-links {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
+}
+
+.nav-footer-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-footer-link {
+  color: var(--clr-black);
+  text-decoration: none;
+  font-size: var(--fs-md);
+}
+
+.footer-legal {
+  text-align: center;
+  font-size: var(--fs-md);
+}
+
+.download-app {
+  display: grid;
+  margin: auto;
+  width: 80vw;
+}
+
+.cta-app-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Media Query Landscape less than 768px (Valor predeterminado de tamaño para dispositivos) */
+@media (max-width: 768px) {
+  .top-nav {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .subscribe-content {
+    margin: 0 1rem 2rem;
+    order: 2;
+    text-align: center;
+  }
+
+  .subscribe-title {
+    margin: auto;
+  }
+}
+
+/* Se comenta todo para comenzar de nuevo con el nuevo código actualizado en CódigoHTML.txt
+h1 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bk);
+}
+
+.btn {
+    background: var(--clr-main);
+    border-radius: 25px;
+    color: var(--clr-white);
+    display: block;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-md);                  FIN COMMENT PRIMARIO */
+/* Hay que comentarias secciones debido a los COMMENT que hay en el código
+    height: 50px; /* Se elimina la altura debido a que el "padding" lo centra*/
+/*Hay que comentarias secciones debido a los COMMENT que hay en el código
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    width: 205px;
+}                                              FIN COMMENT SECUNDARIO */
